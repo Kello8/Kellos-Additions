@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "kellomod:dark_prismarine_pillar",
+    "kellomod:dark_prismarine_bricks",
+    "kellomod:dark_prismarine_brick_stairs",
+    "kellomod:dark_prismarine_brick_slab"
+  ]
+}

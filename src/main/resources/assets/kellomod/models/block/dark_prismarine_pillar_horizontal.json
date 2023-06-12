@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "kellomod:block/dark_prismarine_pillar_top",
+    "side": "kellomod:block/dark_prismarine_pillar"
+  }
+}

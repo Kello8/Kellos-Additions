@@ -1,6 +1,10 @@
 package net.kello.kelloadditions;
 
 import com.mojang.logging.LogUtils;
+import net.kello.kelloadditions.block.ModBlocks;
+import net.kello.kelloadditions.item.ModCreativeModeTabs;
+import net.kello.kelloadditions.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -19,6 +23,9 @@ public class KelloMod {
      public KelloMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -30,14 +37,22 @@ public class KelloMod {
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
+        if(event.getTab() == ModCreativeModeTabs.KELLO_TAB) {
 
+
+            event.accept(ModBlocks.CHISELED_DARK_PRISMARINE_BRICKS);
+            event.accept(ModBlocks.DARK_PRISMARINE_PILLAR);
+            event.accept(ModBlocks.DARK_PRISMARINE_BRICKS);
+            event.accept(ModBlocks.DARK_PRISMARINE_BRICK_STAIRS);
+            event.accept(ModBlocks.DARK_PRISMARINE_BRICK_SLAB);
+        }
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            
         }
     }
 }

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "kellomod:dark_prismarine_bricks"
+    },
+    "X": {
+      "item": "minecraft:sea_lantern"
+    },
+    "O": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "E": {
+      "item": "minecraft:prismarine_crystals"
+    }
+  },
+  "pattern": [
+    "O#E",
+    "#X#",
+    "E#O"
+  ],
+  "result": {
+    "item": "kellomod:chiseled_dark_prismarine_bricks"
+  }
+}
