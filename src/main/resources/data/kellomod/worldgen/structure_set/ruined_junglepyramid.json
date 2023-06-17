@@ -1,0 +1,24 @@
+{
+  "structures": [
+    {
+      "structure": "kellomod:ruined_junglepyramid0",
+      "weight": 5
+    },
+    {
+      "structure": "kellomod:ruined_junglepyramid1",
+      "weight": 3
+    },
+    {
+      "structure": "kellomod:ruined_junglepyramid2",
+      "weight": 4
+    }
+  ],
+  "placement": {
+    "salt": 1601574534,
+
+    "separation": 8,
+    "spacing": 20,
+
+    "type": "minecraft:random_spread"
+  }
+}

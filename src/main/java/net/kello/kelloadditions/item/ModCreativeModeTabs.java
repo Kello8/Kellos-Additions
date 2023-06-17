@@ -1,22 +1,21 @@
 package net.kello.kelloadditions.item;
 
 import net.kello.kelloadditions.KelloMod;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.event.CreativeModeTabEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 
-@Mod.EventBusSubscriber(modid = KelloMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModCreativeModeTabs {
-    public static CreativeModeTab KELLO_TAB;
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, KelloMod.MOD_ID);
+    public static RegistryObject<CreativeModeTab> KELLO_TAB = CREATIVE_MODE_TABS.register("kello_tab", () ->
+            CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.AMETHYST_CLOCK.get()))
+                    .title(Component.translatable("creativemodetab.kello_tab")).build());
 
-    @SubscribeEvent
-    public static void registerCreativeModeTabs(CreativeModeTabEvent.Register event) {
-        KELLO_TAB = event.registerCreativeModeTab(new ResourceLocation(KelloMod.MOD_ID, "kellos_additions_tab"),
-                builder -> builder.icon(() -> new ItemStack(ModItems.AMETHYST_CLOCK.get()))
-                        .title(Component.translatable("creativemodetab.kellos_additions_tab")));
+        public static void register(IEventBus eventBus) {
+            CREATIVE_MODE_TABS.register(eventBus);
     }
 }

@@ -1,0 +1,16 @@
+{
+  "structures": [
+    {
+      "structure": "kellomod:abandoned_watchtower",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1674858362,
+
+    "separation": 9,
+    "spacing": 30,
+
+    "type": "minecraft:random_spread"
+  }
+}

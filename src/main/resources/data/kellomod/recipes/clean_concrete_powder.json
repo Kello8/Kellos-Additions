@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "kellomod:dyed_concrete_powder"
+    },
+    "A": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "pattern": [
+    "###",
+    "#A#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "minecraft:white_concrete_powder"
+  }
+}

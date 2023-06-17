@@ -6,7 +6,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -19,23 +18,23 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, KelloMod.MOD_ID);
 
     public static final RegistryObject<Block> CHISELED_DARK_PRISMARINE_BRICKS = registerBlock("chiseled_dark_prismarine_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE)
                     .strength(2.0f).explosionResistance(30).lightLevel((state) -> 15).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DARK_PRISMARINE_PILLAR = registerBlock("dark_prismarine_pillar",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE)
                     .strength(1.7f).explosionResistance(30).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DARK_PRISMARINE_BRICKS = registerBlock("dark_prismarine_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE)
                     .strength(1.7f).explosionResistance(30).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DARK_PRISMARINE_BRICK_STAIRS = registerBlock("dark_prismarine_brick_stairs",
             () -> new StairBlock(() -> ModBlocks.DARK_PRISMARINE_BRICKS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.of(Material.STONE).strength(1.7f).explosionResistance(30).requiresCorrectToolForDrops()));
+                    BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE).strength(1.7f).explosionResistance(30).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DARK_PRISMARINE_BRICK_SLAB = registerBlock("dark_prismarine_brick_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE)
                     .strength(1.7f).explosionResistance(30).requiresCorrectToolForDrops()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -4,10 +4,9 @@ import com.mojang.logging.LogUtils;
 import net.kello.kelloadditions.block.ModBlocks;
 import net.kello.kelloadditions.item.ModCreativeModeTabs;
 import net.kello.kelloadditions.item.ModItems;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -23,6 +22,8 @@ public class KelloMod {
      public KelloMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+         ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -36,8 +37,8 @@ public class KelloMod {
 
     }
 
-    private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        if(event.getTab() == ModCreativeModeTabs.KELLO_TAB) {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTab() == ModCreativeModeTabs.KELLO_TAB.get()) {
 
 
             event.accept(ModBlocks.CHISELED_DARK_PRISMARINE_BRICKS);
