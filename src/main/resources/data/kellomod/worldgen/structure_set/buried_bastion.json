@@ -1,0 +1,16 @@
+{
+  "structures": [
+    {
+      "structure": "kellomod:buried_bastion",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1698262637,
+
+    "separation": 12,
+    "spacing": 30,
+
+    "type": "minecraft:random_spread"
+  }
+}

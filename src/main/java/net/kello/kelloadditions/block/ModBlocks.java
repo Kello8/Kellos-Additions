@@ -44,6 +44,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> SUSPICIOUS_END_STONE = registerBlock("suspicious_end_stone",
             () -> new BrushableBlock(Blocks.END_STONE, BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).strength(3F, 9F).sound(SoundType.STONE).pushReaction(PushReaction.DESTROY), SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED));
 
+    public static final RegistryObject<Block> O = registerBlock("o",
+            () -> new BuddingAmethystBlock(BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE)
+                    .strength(1.7f).explosionResistance(30).requiresCorrectToolForDrops()));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

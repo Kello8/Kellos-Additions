@@ -1,0 +1,16 @@
+{
+  "structures": [
+    {
+      "structure": "kellomod:deep_dark_ruin",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1672627251,
+
+    "separation": 12,
+    "spacing": 30,
+
+    "type": "minecraft:random_spread"
+  }
+}
