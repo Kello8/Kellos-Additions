@@ -1,0 +1,33 @@
+{
+  "parent": "kellomod:kellosadditions/root",
+  "criteria": {
+    "diamond_brush": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kellomod:diamond_brush"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": "Craft a Diamond Brush",
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "kellomod:diamond_brush"
+    },
+    "show_toast": true,
+    "title": "Delicate Brushing"
+  },
+  "requirements": [
+    [
+      "diamond_brush"
+    ]
+  ]
+}

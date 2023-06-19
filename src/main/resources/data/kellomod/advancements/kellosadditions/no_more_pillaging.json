@@ -1,0 +1,37 @@
+{
+  "parent": "kellomod:kellosadditions/delicate_brushing",
+  "criteria": {
+    "in_abandoned_watchtower": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "kellomod:abandoned_watchtower"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": "Come across a ruined Pillager Outpost.",
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:crossbow"
+    },
+    "show_toast": true,
+    "title": "No More Pillaging"
+  },
+  "requirements": [
+    [
+      "in_abandoned_watchtower"
+    ]
+  ]
+}

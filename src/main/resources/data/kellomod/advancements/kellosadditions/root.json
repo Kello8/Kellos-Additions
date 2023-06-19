@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "clock": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:clock"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "kellomod:textures/block/dark_prismarine_pillar.png",
+    "description": "Obtain a clock",
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "kellomod:amethyst_clock"
+    },
+    "show_toast": false,
+    "title": "Kello's Additions"
+  },
+  "requirements": [
+    [
+      "clock"
+    ]
+  ]
+}

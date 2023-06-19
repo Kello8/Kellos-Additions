@@ -1,13 +1,14 @@
 {
-  "name": "kellomod:abandoned_watchtower/start_pool",
+  "name": "kellomod:collapsed_end_city/start_pool",
   "fallback": "minecraft:empty",
 
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "kellomod:abandoned_watchtower",
-        "processors": "minecraft:mossify_20_percent",
+
+        "location": "kellomod:collapsed_end_city/base",
+        "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }

@@ -1,0 +1,15 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1543913276,
+    "separation": 12,
+    "spacing": 22,
+    "spread_type": "triangular"
+  },
+  "structures": [
+    {
+      "structure": "kellomod:collapsed_end_city",
+      "weight": 1
+    }
+  ]
+}

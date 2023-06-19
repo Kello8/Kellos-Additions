@@ -1,0 +1,37 @@
+{
+  "parent": "kellomod:kellosadditions/no_more_pillaging",
+  "criteria": {
+    "in_end_city_ruins": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "kellomod:collapsed_end_city"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": "Come across a collapsed end city.",
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:shulker_shell"
+    },
+    "show_toast": true,
+    "title": "Collapsed Remains"
+  },
+  "requirements": [
+    [
+      "in_end_city_ruins"
+    ]
+  ]
+}
