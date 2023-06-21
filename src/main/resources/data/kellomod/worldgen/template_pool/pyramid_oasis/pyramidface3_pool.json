@@ -1,0 +1,16 @@
+{
+  "name": "kellomod:pyramid_oasis/pyramidface3_pool",
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "kellomod:pyramid_oasis/pyramid_face3",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

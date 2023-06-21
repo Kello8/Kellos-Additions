@@ -1,0 +1,61 @@
+{
+  "name": "kellomod:pyramid_oasis/pyramidface3_pool",
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "location": "kellomod:pyramid_oasis/pyramid_dungeon_room0",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "kellomod:pyramid_oasis/pyramid_dungeon_room1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "kellomod:pyramid_oasis/pyramid_dungeon_room2",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "kellomod:pyramid_oasis/pyramid_dungeon_room3",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "kellomod:pyramid_oasis/pyramid_dungeon_room4",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "minecraft:empty",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

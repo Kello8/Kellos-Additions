@@ -1,6 +1,7 @@
 package net.kello.kelloadditions.block;
 
 import net.kello.kelloadditions.KelloMod;
+import net.kello.kelloadditions.block.custom.QuickSandBlock;
 import net.kello.kelloadditions.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
@@ -44,9 +45,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> SUSPICIOUS_END_STONE = registerBlock("suspicious_end_stone",
             () -> new BrushableBlock(Blocks.END_STONE, BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).strength(3F, 9F).sound(SoundType.STONE).pushReaction(PushReaction.DESTROY), SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED));
 
-    public static final RegistryObject<Block> O = registerBlock("o",
-            () -> new BuddingAmethystBlock(BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE)
-                    .strength(1.7f).explosionResistance(30).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> QUICK_SAND = registerBlock("quick_sand",
+            () -> new QuickSandBlock(BlockBehaviour.Properties.copy(Blocks.SAND)
+                    .strength(1.7f).explosionResistance(12).requiresCorrectToolForDrops()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

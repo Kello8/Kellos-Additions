@@ -41,6 +41,7 @@ public class KelloMod {
         if(event.getTab() == ModCreativeModeTabs.KELLO_TAB.get()) {
             event.accept(ModItems.DIAMOND_BRUSH);
 
+            event.accept(ModBlocks.QUICK_SAND);
             event.accept(ModBlocks.SUSPICIOUS_END_STONE);
             event.accept(ModBlocks.CHISELED_DARK_PRISMARINE_BRICKS);
             event.accept(ModBlocks.DARK_PRISMARINE_PILLAR);

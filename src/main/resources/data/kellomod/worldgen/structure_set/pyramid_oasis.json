@@ -1,0 +1,16 @@
+{
+  "structures": [
+    {
+      "structure": "kellomod:pyramid_oasis",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1607283048,
+
+    "separation": 10,
+    "spacing": 38,
+
+    "type": "minecraft:random_spread"
+  }
+}
