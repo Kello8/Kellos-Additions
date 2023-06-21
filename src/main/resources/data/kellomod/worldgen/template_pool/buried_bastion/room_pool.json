@@ -3,7 +3,7 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "minecraft:empty",
         "processors": "minecraft:empty",
@@ -12,7 +12,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "kellomod:buried_bastion/room_0",
         "processors": "minecraft:bastion_generic_degradation",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "kellomod:buried_bastion/room_1",
         "processors": "minecraft:bastion_generic_degradation",
@@ -42,6 +42,33 @@
       "weight": 2,
       "element": {
         "location": "kellomod:buried_bastion/room_3",
+        "processors": "minecraft:bastion_generic_degradation",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "kellomod:buried_bastion/room_4",
+        "processors": "minecraft:bastion_generic_degradation",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "kellomod:buried_bastion/room_5",
+        "processors": "minecraft:bastion_generic_degradation",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "kellomod:buried_bastion/room_6",
         "processors": "minecraft:bastion_generic_degradation",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
