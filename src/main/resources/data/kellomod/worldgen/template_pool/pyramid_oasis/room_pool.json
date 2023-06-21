@@ -1,5 +1,5 @@
 {
-  "name": "kellomod:pyramid_oasis/pyramidface3_pool",
+  "name": "kellomod:pyramid_oasis/room_pool",
   "fallback": "minecraft:empty",
 
   "elements": [

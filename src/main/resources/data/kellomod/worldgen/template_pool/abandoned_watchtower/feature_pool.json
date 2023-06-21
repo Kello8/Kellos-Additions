@@ -1,12 +1,12 @@
 {
-  "name": "kellomod:pyramid_oasis/hallway_pool",
+  "name": "kellomod:abandoned_watchtower/feature_pool",
   "fallback": "minecraft:empty",
 
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "kellomod:pyramid_oasis/pyramid_dungeon_hallway0",
+        "location": "kellomod:abandoned_watchtower/feature0",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -15,7 +15,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "kellomod:pyramid_oasis/pyramid_dungeon_hallway1",
+        "location": "kellomod:abandoned_watchtower/feature1",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -24,7 +24,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "kellomod:pyramid_oasis/pyramid_dungeon_hallway2",
+        "location": "kellomod:abandoned_watchtower/feature2",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -33,7 +33,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "kellomod:pyramid_oasis/pyramid_dungeon_hallway3",
+        "location": "kellomod:abandoned_watchtower/feature3",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -42,7 +42,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "kellomod:pyramid_oasis/pyramid_dungeon_hallway4",
+        "location": "kellomod:abandoned_watchtower/feature4",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -51,7 +51,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "kellomod:pyramid_oasis/pyramid_dungeon_hallway5",
+        "location": "kellomod:abandoned_watchtower/feature5",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -60,7 +60,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "kellomod:pyramid_oasis/pyramid_dungeon_hallway6",
+        "location": "kellomod:abandoned_watchtower/feature6",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -69,7 +69,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "kellomod:pyramid_oasis/pyramid_dungeon_hallway7",
+        "location": "kellomod:abandoned_watchtower/feature7",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -78,43 +78,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "kellomod:pyramid_oasis/pyramid_dungeon_hallway8",
-        "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "kellomod:pyramid_oasis/pyramid_dungeon_hallway9",
-        "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "kellomod:pyramid_oasis/pyramid_dungeon_hallway10",
-        "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "kellomod:pyramid_oasis/pyramid_dungeon_hallway11",
-        "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-      "weight": 3,
-      "element": {
-        "location": "minecraft:empty",
+        "location": "kellomod:abandoned_watchtower/feature8",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
