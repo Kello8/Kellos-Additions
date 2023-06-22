@@ -1,7 +1,7 @@
 {
-  "parent": "kellomod:kellosadditions/delicate_brushing",
+  "parent": "kellomod:kellosadditions/hurtful_pigs",
   "criteria": {
-    "in_end_city_ruins": {
+    "in_buried_bastion": {
       "conditions": {
         "player": [
           {
@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "kellomod:collapsed_end_city"
+                "structure": "kellomod:buried_bastion"
               }
             }
           }
@@ -20,18 +20,18 @@
   },
   "display": {
     "announce_to_chat": true,
-    "description": "Come across a collapsed end city.",
+    "description": "Encounter a Buried Bastion.",
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "minecraft:shulker_shell"
+      "item": "minecraft:gilded_blackstone"
     },
     "show_toast": true,
-    "title": "Collapsed Remains"
+    "title": "Buried Danger"
   },
   "requirements": [
     [
-      "in_end_city_ruins"
+      "in_buried_bastion"
     ]
   ]
 }

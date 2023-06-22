@@ -1,7 +1,7 @@
 {
   "parent": "kellomod:kellosadditions/delicate_brushing",
   "criteria": {
-    "in_end_city_ruins": {
+    "in_spawner": {
       "conditions": {
         "player": [
           {
@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "kellomod:collapsed_end_city"
+                "structure": "kellomod:nether_dungeon_spawner"
               }
             }
           }
@@ -20,18 +20,18 @@
   },
   "display": {
     "announce_to_chat": true,
-    "description": "Come across a collapsed end city.",
+    "description": "Mine into a Nether Dungeon Spawner.",
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "minecraft:shulker_shell"
+      "item": "minecraft:blackstone"
     },
     "show_toast": true,
-    "title": "Collapsed Remains"
+    "title": "Hurtful Pigs"
   },
   "requirements": [
     [
-      "in_end_city_ruins"
+      "in_spawner"
     ]
   ]
 }

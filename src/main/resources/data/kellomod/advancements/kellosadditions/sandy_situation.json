@@ -1,0 +1,29 @@
+{
+  "parent": "kellomod:kellosadditions/an_oasis",
+  "criteria": {
+    "in_quick_sand": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+              "block": "kellomod:quick_sand"
+            }
+    }
+  },
+
+
+  "display": {
+    "announce_to_chat": true,
+    "description": "Fall into Quick Sand and quickly become in a bad situation.",
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "kellomod:quick_sand"
+    },
+    "show_toast": true,
+    "title": "Sandy Situation"
+  },
+  "requirements": [
+    [
+      "in_quick_sand"
+    ]
+  ]
+}
