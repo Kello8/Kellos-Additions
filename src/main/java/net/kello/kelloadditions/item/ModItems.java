@@ -28,9 +28,9 @@ public class ModItems {
     public static final RegistryObject<Item> DIAMOND_BRUSH = ITEMS.register("diamond_brush",
             () -> new BrushItem(new Item.Properties().durability(512)));
 
-    public static final RegistryObject<Item> RAT_SPAWN_EGG = ITEMS.register("rat_spawn_egg",
+    public static final RegistryObject<Item> RAT = ITEMS.register("rat",
             () -> new ForgeSpawnEggItem(ModEntities.RAT, 0x614023, 0x8f5d31,
-                        new Item.Properties()));
+                        new Item.Properties().stacksTo(1)));
 
 
 

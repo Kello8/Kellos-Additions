@@ -46,7 +46,7 @@ public class KelloMod {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTab() == ModCreativeModeTabs.KELLO_TAB.get()) {
-            event.accept(ModItems.RAT_SPAWN_EGG);
+            event.accept(ModItems.RAT);
             event.accept(ModItems.DIAMOND_BRUSH);
 
             event.accept(ModBlocks.QUICK_SAND);
