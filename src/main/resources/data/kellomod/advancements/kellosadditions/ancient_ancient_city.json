@@ -1,0 +1,37 @@
+{
+  "parent": "kellomod:kellosadditions/delicate_brushing",
+  "criteria": {
+    "in_city": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "kellomod:ruined_ancient_city"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": "Come across a Ancient City Ruin.",
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:sculk"
+    },
+    "show_toast": true,
+    "title": "Ancient Ancient City"
+  },
+  "requirements": [
+    [
+      "in_city"
+    ]
+  ]
+}
