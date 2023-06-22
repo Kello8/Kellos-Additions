@@ -1,0 +1,16 @@
+{
+  "structures": [
+    {
+      "structure": "kellomod:nether_dungeon_spawner",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1604949263,
+
+    "separation": 6,
+    "spacing": 16,
+
+    "type": "minecraft:random_spread"
+  }
+}

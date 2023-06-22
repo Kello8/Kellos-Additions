@@ -51,6 +51,24 @@
     {
       "weight": 2,
       "element": {
+        "location": "kellomod:pyramid_oasis/pyramid_dungeon_room5",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "kellomod:pyramid_oasis/pyramid_dungeon_room6",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
         "location": "minecraft:empty",
         "processors": "minecraft:empty",
         "projection": "rigid",
