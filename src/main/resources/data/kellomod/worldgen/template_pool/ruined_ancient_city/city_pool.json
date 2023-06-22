@@ -1,0 +1,17 @@
+{
+  "name": "kellomod:ruined_ancient_city/start_pool",
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "kellomod:ruined_ancient_city/left",
+        "processors": "minecraft:ancient_city_start_degradation",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
