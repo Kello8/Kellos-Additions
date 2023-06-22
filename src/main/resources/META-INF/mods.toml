@@ -18,6 +18,12 @@ A mod developed by Kello.
     ordering="NONE"
     side="BOTH"
 [[dependencies.kellomod]]
+    modId="geckolib"
+    mandatory=true
+    versionRange="[4.2,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.kellomod]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.20,1.21)"

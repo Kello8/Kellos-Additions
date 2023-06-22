@@ -1,5 +1,6 @@
 {
   "item.kellomod.amethyst_clock": "§dAmethyst Clock",
+  "item.kellomod.rat_spawn_egg": "Rat Spawn Egg",
   "item.kellomod.diamond_brush": "Diamond Brush",
 
   "block.kellomod.chiseled_dark_prismarine_bricks": "Chiseled Dark Prismarine Bricks",
@@ -9,6 +10,8 @@
   "block.kellomod.dark_prismarine_brick_slab": "Dark Prismarine Brick Slab",
   "block.kellomod.suspicious_end_stone": "Suspicious End Stone",
   "block.kellomod.quick_sand": "Quick Sand",
+
+  "entity.kellomod.rat": "Rat",
 
   "creativemodetab.kello_tab": "§5§lKello's Additions"
 }

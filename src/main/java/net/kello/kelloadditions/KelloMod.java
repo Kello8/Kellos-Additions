@@ -2,8 +2,13 @@ package net.kello.kelloadditions;
 
 import com.mojang.logging.LogUtils;
 import net.kello.kelloadditions.block.ModBlocks;
+import net.kello.kelloadditions.entity.ModEntities;
+import net.kello.kelloadditions.entity.client.RatRenderer;
+import net.kello.kelloadditions.event.ModEvents;
 import net.kello.kelloadditions.item.ModCreativeModeTabs;
 import net.kello.kelloadditions.item.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.util.datafix.fixes.EntityRedundantChanceTagsFix;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -27,6 +32,8 @@ public class KelloMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModEntities.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -39,6 +46,7 @@ public class KelloMod {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTab() == ModCreativeModeTabs.KELLO_TAB.get()) {
+            event.accept(ModItems.RAT_SPAWN_EGG);
             event.accept(ModItems.DIAMOND_BRUSH);
 
             event.accept(ModBlocks.QUICK_SAND);
@@ -55,6 +63,7 @@ public class KelloMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.RAT.get(), RatRenderer::new);
             
         }
     }
