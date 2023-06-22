@@ -17,7 +17,7 @@ public class ModEntities {
     public static final RegistryObject<EntityType<RatEntity>> RAT =
             ENTITY_TYPES.register("rat",
                     () -> EntityType.Builder.of(RatEntity::new, MobCategory.CREATURE)
-                            .sized(0.4f, 0.55f)
+                            .sized(0.6f, 0.3f)
                             .build(new ResourceLocation(KelloMod.MOD_ID, "rat").toString()));
 
     public static void register(IEventBus eventBus) {
