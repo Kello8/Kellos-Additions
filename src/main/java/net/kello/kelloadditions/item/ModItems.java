@@ -33,7 +33,7 @@ public class ModItems {
                         new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> RAT_TAIL = ITEMS.register("rat_tail",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> RAT_HAIR = ITEMS.register("rat_hair",
+    public static final RegistryObject<Item> RAT_FUR = ITEMS.register("rat_fur",
             () -> new Item(new Item.Properties()));
 
 

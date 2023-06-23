@@ -51,7 +51,7 @@ public class KelloMod {
         if(event.getTab() == ModCreativeModeTabs.KELLO_TAB.get()) {
             event.accept(ModItems.RAT);
             event.accept(ModItems.RAT_TAIL);
-            event.accept(ModItems.RAT_HAIR);
+            event.accept(ModItems.RAT_FUR);
             event.accept(ModItems.DIAMOND_BRUSH);
 
             event.accept(ModBlocks.QUICK_SAND);

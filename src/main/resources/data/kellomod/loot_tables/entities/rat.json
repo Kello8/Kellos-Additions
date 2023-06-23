@@ -38,7 +38,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "kellomod:rat_hair"
+          "name": "kellomod:rat_fur"
         }
       ],
       "rolls": 1.0

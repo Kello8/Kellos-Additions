@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "kellomod:rat_hair"
+      "item": "kellomod:rat_fur"
     }
   },
   "pattern": [
