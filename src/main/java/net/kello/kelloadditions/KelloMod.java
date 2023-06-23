@@ -7,6 +7,7 @@ import net.kello.kelloadditions.entity.client.RatRenderer;
 import net.kello.kelloadditions.event.ModEvents;
 import net.kello.kelloadditions.item.ModCreativeModeTabs;
 import net.kello.kelloadditions.item.ModItems;
+import net.kello.kelloadditions.sound.ModSounds;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.util.datafix.fixes.EntityRedundantChanceTagsFix;
 import net.minecraftforge.api.distmarker.Dist;
@@ -33,6 +34,7 @@ public class KelloMod {
         ModBlocks.register(modEventBus);
 
         ModEntities.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);

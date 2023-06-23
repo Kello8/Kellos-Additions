@@ -13,5 +13,9 @@
 
   "entity.kellomod.rat": "Rat",
 
+  "sounds.kellomod.rat_squeak": "Rat squeaks",
+  "sounds.kellomod.rat_hurt": "Rat hurts",
+  "sounds.kellomod.rat_death": "Rat dies",
+
   "creativemodetab.kello_tab": "§5§lKello's Additions"
 }

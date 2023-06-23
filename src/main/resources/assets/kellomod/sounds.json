@@ -1,0 +1,22 @@
+{
+ "rat_squeak": {
+  "subtitle": "sounds.kellomod.rat_squeak",
+  "sounds": [
+   "kellomod:rat_squeak"
+  ]
+ },
+
+ "rat_hurt": {
+  "subtitle": "sounds.kellomod.rat_hurt",
+  "sounds": [
+   "kellomod:rat_hurt"
+  ]
+ },
+
+ "rat_death": {
+  "subtitle": "sounds.kellomod.rat_death",
+  "sounds": [
+   "kellomod:rat_death"
+  ]
+ }
+}
