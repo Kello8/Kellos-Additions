@@ -6,7 +6,16 @@
     {
       "weight": 1,
       "element": {
-        "location": "kellomod:pyramid_oasis/pyramid_dungeon_entrance",
+        "location": "kellomod:pyramid_oasis/pyramid_dungeon_entrance0",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "kellomod:pyramid_oasis/pyramid_dungeon_entrance1",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
