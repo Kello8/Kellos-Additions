@@ -16,10 +16,15 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.animal.IronGolem;
+import net.minecraft.world.entity.animal.*;
+import net.minecraft.world.entity.animal.horse.Horse;
 import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.entity.monster.Pillager;
+import net.minecraft.world.entity.monster.Ravager;
+import net.minecraft.world.entity.monster.Silverfish;
+import net.minecraft.world.entity.monster.piglin.Piglin;
 import net.minecraft.world.entity.npc.AbstractVillager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -57,7 +62,7 @@ public class RatEntity extends TamableAnimal implements GeoEntity {
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 4D)
+                .add(Attributes.MAX_HEALTH, 6D)
                 .add(Attributes.ATTACK_DAMAGE, 1f)
                 .add(Attributes.ATTACK_SPEED, 0.8f)
                 .add(Attributes.MOVEMENT_SPEED, 0.4f).build();
@@ -65,8 +70,12 @@ public class RatEntity extends TamableAnimal implements GeoEntity {
 
     @Override
     protected void registerGoals() {
+        this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setAlertOthers());
         this.goalSelector.addGoal(1, new FloatGoal(this));
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2D, false));
+        this.goalSelector.addGoal(3, new FleeSunGoal(this, 1.0D));
+        this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, Ravager.class, 6.0F, 1.0D, 1.2D));
+        this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, Horse.class, 6.0F, 1.0D, 1.2D));
         this.goalSelector.addGoal(4, new BreedGoal(this, 1.0D));
         this.goalSelector.addGoal(5, new TemptGoal(this, 1.25D, Ingredient.of(Items.WHEAT), false));
         this.goalSelector.addGoal(6, new LeapAtTargetGoal(this, 0.6F));
@@ -80,6 +89,15 @@ public class RatEntity extends TamableAnimal implements GeoEntity {
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, AbstractVillager.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, IronGolem.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Creeper.class, true));
+        this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, Chicken.class, true));
+        this.targetSelector.addGoal(6, new NearestAttackableTargetGoal<>(this, Pig.class, true));
+        this.targetSelector.addGoal(7, new NearestAttackableTargetGoal<>(this, Sheep.class, true));
+        this.targetSelector.addGoal(8, new NearestAttackableTargetGoal<>(this, Cow.class, true));
+        this.targetSelector.addGoal(9, new NearestAttackableTargetGoal<>(this, Silverfish.class, true));
+        this.targetSelector.addGoal(10, new NearestAttackableTargetGoal<>(this, Rabbit.class, true));
+        this.targetSelector.addGoal(11, new NearestAttackableTargetGoal<>(this, Parrot.class, true));
+        this.targetSelector.addGoal(12, new NearestAttackableTargetGoal<>(this, Piglin.class, true));
+        this.targetSelector.addGoal(13, new NearestAttackableTargetGoal<>(this, Pillager.class, true));
     }
 
     @Nullable
@@ -101,13 +119,13 @@ public class RatEntity extends TamableAnimal implements GeoEntity {
     public void setTame(boolean p_30443_) {
         super.setTame(p_30443_);
         if (p_30443_) {
-            this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(6.0D);
-            this.setHealth(6.0F);
+            this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(14.0D);
+            this.setHealth(14.0F);
         } else {
-            this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(4.0D);
+            this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(6.0D);
         }
 
-        this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1.0D);
+        this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(4.0D);
     }
 
     private <T extends GeoAnimatable> PlayState attackPredirate(AnimationState<T> tAnimationState) {
