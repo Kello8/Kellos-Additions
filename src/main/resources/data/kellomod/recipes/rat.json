@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "kellomod:rat_tail"
+    },
+    "A": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "B": {
+      "item": "minecraft:bone"
+    },
+    "X": {
+      "item": "kellomod:rat_hair"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "BAB",
+    "X#X"
+  ],
+  "result": {
+    "item": "kellomod:rat"
+  }
+}

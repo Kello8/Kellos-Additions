@@ -4,12 +4,10 @@ import com.mojang.logging.LogUtils;
 import net.kello.kelloadditions.block.ModBlocks;
 import net.kello.kelloadditions.entity.ModEntities;
 import net.kello.kelloadditions.entity.client.RatRenderer;
-import net.kello.kelloadditions.event.ModEvents;
 import net.kello.kelloadditions.item.ModCreativeModeTabs;
 import net.kello.kelloadditions.item.ModItems;
 import net.kello.kelloadditions.sound.ModSounds;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.util.datafix.fixes.EntityRedundantChanceTagsFix;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -20,6 +18,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib.GeckoLib;
 
 @Mod(KelloMod.MOD_ID)
 public class KelloMod {
@@ -36,6 +35,8 @@ public class KelloMod {
         ModEntities.register(modEventBus);
         ModSounds.register(modEventBus);
 
+        GeckoLib.initialize();
+
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -49,6 +50,8 @@ public class KelloMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTab() == ModCreativeModeTabs.KELLO_TAB.get()) {
             event.accept(ModItems.RAT);
+            event.accept(ModItems.RAT_TAIL);
+            event.accept(ModItems.RAT_HAIR);
             event.accept(ModItems.DIAMOND_BRUSH);
 
             event.accept(ModBlocks.QUICK_SAND);
@@ -66,7 +69,6 @@ public class KelloMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.RAT.get(), RatRenderer::new);
-            
         }
     }
 }

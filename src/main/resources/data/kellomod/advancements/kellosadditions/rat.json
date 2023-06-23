@@ -1,0 +1,33 @@
+{
+  "parent": "kellomod:kellosadditions/root",
+  "criteria": {
+    "rat": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kellomod:rat"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": "Rat",
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "kellomod:rat"
+    },
+    "show_toast": true,
+    "title": "Rat"
+  },
+  "requirements": [
+    [
+      "rat"
+    ]
+  ]
+}

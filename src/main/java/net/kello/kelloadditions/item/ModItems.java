@@ -31,6 +31,10 @@ public class ModItems {
     public static final RegistryObject<Item> RAT = ITEMS.register("rat",
             () -> new ForgeSpawnEggItem(ModEntities.RAT, 0x614023, 0x8f5d31,
                         new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> RAT_TAIL = ITEMS.register("rat_tail",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAT_HAIR = ITEMS.register("rat_hair",
+            () -> new Item(new Item.Properties()));
 
 
 

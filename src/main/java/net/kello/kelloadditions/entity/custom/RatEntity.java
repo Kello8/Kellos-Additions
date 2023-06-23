@@ -1,6 +1,7 @@
 package net.kello.kelloadditions.entity.custom;
 
 import net.kello.kelloadditions.entity.ModEntities;
+import net.kello.kelloadditions.item.ModItems;
 import net.kello.kelloadditions.sound.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -57,7 +58,7 @@ public class RatEntity extends TamableAnimal implements GeoEntity {
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 4D)
-                .add(Attributes.ATTACK_DAMAGE, 0.5f)
+                .add(Attributes.ATTACK_DAMAGE, 1f)
                 .add(Attributes.ATTACK_SPEED, 0.8f)
                 .add(Attributes.MOVEMENT_SPEED, 0.4f).build();
     }
@@ -91,7 +92,7 @@ public class RatEntity extends TamableAnimal implements GeoEntity {
         boolean flag = super.doHurtTarget(p_32892_);
         if (flag && this.getMainHandItem().isEmpty() && p_32892_ instanceof LivingEntity) {
             float f = this.level().getCurrentDifficultyAt(this.blockPosition()).getEffectiveDifficulty();
-            ((LivingEntity)p_32892_).addEffect(new MobEffectInstance(MobEffects.POISON, 30 * (int)f), this);
+            ((LivingEntity)p_32892_).addEffect(new MobEffectInstance(MobEffects.POISON, 400 * (int)f), this);
         }
 
         return flag;
@@ -109,10 +110,22 @@ public class RatEntity extends TamableAnimal implements GeoEntity {
         this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1.0D);
     }
 
+    private <T extends GeoAnimatable> PlayState attackPredirate(AnimationState<T> tAnimationState) {
+        if(this.swinging && tAnimationState.getController().getAnimationState().equals(AnimationController.State.STOPPED)) {
+            tAnimationState.getController().forceAnimationReset();
+            tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.rat.attack", Animation.LoopType.PLAY_ONCE));
+            this.swinging = false;
+        }
+
+        return PlayState.CONTINUE;
+    }
+
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
         controllerRegistrar.add(new AnimationController<>(this, "controller", 0, this::predirate));
+        controllerRegistrar.add(new AnimationController<>(this, "attackController", 0, this::attackPredirate));
     }
+
 
     public InteractionResult mobInteract(Player p_28153_, InteractionHand p_28154_) {
         ItemStack itemstack = p_28153_.getItemInHand(p_28154_);
@@ -162,6 +175,25 @@ public class RatEntity extends TamableAnimal implements GeoEntity {
 
             return interactionresult1;
         }
+    }
+
+    protected void dropCustomDeathLoot(DamageSource p_34291_, int p_34292_, boolean p_34293_) {
+        super.dropCustomDeathLoot(p_34291_, p_34292_, p_34293_);
+        Entity entity = p_34291_.getEntity();
+        if (entity instanceof Creeper creeper) {
+            if (creeper.canDropMobsSkull()) {
+                ItemStack itemstack = this.getRat();
+                if (!itemstack.isEmpty()) {
+                    creeper.increaseDroppedSkulls();
+                    this.spawnAtLocation(itemstack);
+                }
+            }
+        }
+
+    }
+
+    protected ItemStack getRat() {
+        return new ItemStack(ModItems.RAT.get());
     }
 
     public boolean isFood(ItemStack p_28177_) {
