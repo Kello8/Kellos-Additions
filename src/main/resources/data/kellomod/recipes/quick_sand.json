@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:sand"
+    },
+    "A": {
+      "item": "minecraft:water_bucket"
+    },
+    "X": {
+      "item": "minecraft:clay"
+    }
+  },
+  "pattern": [
+    "X#X",
+    "#A#",
+    "X#X"
+  ],
+  "result": {
+    "count": 4,
+    "item": "kellomod:quick_sand"
+  }
+}
