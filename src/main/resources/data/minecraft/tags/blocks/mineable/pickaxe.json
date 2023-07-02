@@ -5,6 +5,9 @@
     "kellomod:dark_prismarine_bricks",
     "kellomod:dark_prismarine_brick_stairs",
     "kellomod:dark_prismarine_brick_slab",
+    "kellomod:packed_ice_bricks",
+    "kellomod:packed_ice_brick_stairs",
+    "kellomod:packed_ice_brick_slab",
     "kellomod:suspicious_end_stone"
   ]
 }

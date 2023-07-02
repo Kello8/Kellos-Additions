@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "kellomod:block/packed_ice_bricks",
+    "side": "kellomod:block/packed_ice_bricks",
+    "top": "kellomod:block/packed_ice_bricks"
+  }
+}

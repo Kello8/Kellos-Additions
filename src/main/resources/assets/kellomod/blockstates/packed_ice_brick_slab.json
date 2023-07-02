@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "kellomod:block/packed_ice_brick_slab"
+    },
+    "type=double": {
+      "model": "kellomod:block/packed_ice_bricks"
+    },
+    "type=top": {
+      "model": "kellomod:block/packed_ice_brick_slab_top"
+    }
+  }
+}

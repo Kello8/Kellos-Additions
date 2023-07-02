@@ -61,6 +61,9 @@ public class KelloMod {
             event.accept(ModBlocks.DARK_PRISMARINE_BRICKS);
             event.accept(ModBlocks.DARK_PRISMARINE_BRICK_STAIRS);
             event.accept(ModBlocks.DARK_PRISMARINE_BRICK_SLAB);
+            event.accept(ModBlocks.PACKED_ICE_BRICKS);
+            event.accept(ModBlocks.PACKED_ICE_BRICK_STAIRS);
+            event.accept(ModBlocks.PACKED_ICE_BRICK_SLAB);
         }
     }
 

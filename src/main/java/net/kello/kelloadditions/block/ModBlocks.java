@@ -49,6 +49,18 @@ public class ModBlocks {
             () -> new QuickSandBlock(BlockBehaviour.Properties.copy(Blocks.SAND)
                     .strength(1.7f).explosionResistance(12).requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> PACKED_ICE_BRICKS = registerBlock("packed_ice_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.PACKED_ICE)
+                    .strength(0.2f).explosionResistance(6).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> PACKED_ICE_BRICK_STAIRS = registerBlock("packed_ice_brick_stairs",
+            () -> new StairBlock(() -> Blocks.PACKED_ICE.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.PACKED_ICE)
+                    .strength(0.2f).explosionResistance(6).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> PACKED_ICE_BRICK_SLAB = registerBlock("packed_ice_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.PACKED_ICE)
+                    .strength(0.2f).explosionResistance(6).requiresCorrectToolForDrops()));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
