@@ -26,7 +26,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class QuickSandBlock extends Block {
     private static final float HORIZONTAL_PARTICLE_MOMENTUM_FACTOR = 0.083333336F;
     private static final float IN_BLOCK_HORIZONTAL_SPEED_MULTIPLIER = 3.9F;
-    private static final float IN_BLOCK_VERTICAL_SPEED_MULTIPLIER = 0.2F;
+    private static final float IN_BLOCK_VERTICAL_SPEED_MULTIPLIER = 0.0F;
     private static final float NUM_BLOCKS_TO_FALL_INTO_BLOCK = 2.5F;
     private static final VoxelShape FALLING_COLLISION_SHAPE = Shapes.box(0.0D, 0.0D, 0.0D, 1.0D, (double)0.9F, 1.0D);
     private static final double MINIMUM_FALL_DISTANCE_FOR_SOUND = 4.0D;
