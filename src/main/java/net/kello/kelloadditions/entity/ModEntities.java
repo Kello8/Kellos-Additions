@@ -1,6 +1,7 @@
 package net.kello.kelloadditions.entity;
 
 import net.kello.kelloadditions.KelloMod;
+import net.kello.kelloadditions.entity.custom.EnderRatEntity;
 import net.kello.kelloadditions.entity.custom.RatEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -19,6 +20,12 @@ public class ModEntities {
                     () -> EntityType.Builder.of(RatEntity::new, MobCategory.CREATURE)
                             .sized(0.6f, 0.3f)
                             .build(new ResourceLocation(KelloMod.MOD_ID, "rat").toString()));
+
+    public static final RegistryObject<EntityType<EnderRatEntity>> ENDER_RAT =
+            ENTITY_TYPES.register("ender_rat",
+                    () -> EntityType.Builder.of(EnderRatEntity::new, MobCategory.CREATURE)
+                            .sized(0.6f, 0.3f)
+                            .build(new ResourceLocation(KelloMod.MOD_ID, "ender_rat").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

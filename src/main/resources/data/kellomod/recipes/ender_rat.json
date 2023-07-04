@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:chorus_fruit"
+    },
+    "A": {
+      "item": "minecraft:ender_pearl"
+    },
+    "B": {
+      "item": "minecraft:end_stone"
+    },
+    "X": {
+      "item": "kellomod:shulker_shard"
+    }
+  },
+  "pattern": [
+    "XBX",
+    "BAB",
+    "X#X"
+  ],
+  "result": {
+    "item": "kellomod:ender_rat"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "minecraft:end_barrens",
+    "minecraft:end_highlands",
+    "minecraft:end_midlands"
+  ],
+  "spawners": {
+    "type": "kellomod:ender_rat",
+    "weight": 40,
+    "minCount": 1,
+    "maxCount": 7
+  }
+}

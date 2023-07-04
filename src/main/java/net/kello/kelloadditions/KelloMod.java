@@ -3,6 +3,7 @@ package net.kello.kelloadditions;
 import com.mojang.logging.LogUtils;
 import net.kello.kelloadditions.block.ModBlocks;
 import net.kello.kelloadditions.entity.ModEntities;
+import net.kello.kelloadditions.entity.client.EnderRatRenderer;
 import net.kello.kelloadditions.entity.client.RatRenderer;
 import net.kello.kelloadditions.item.ModCreativeModeTabs;
 import net.kello.kelloadditions.item.ModItems;
@@ -50,8 +51,10 @@ public class KelloMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTab() == ModCreativeModeTabs.KELLO_TAB.get()) {
             event.accept(ModItems.RAT);
+            event.accept(ModItems.ENDER_RAT);
             event.accept(ModItems.RAT_TAIL);
             event.accept(ModItems.RAT_FUR);
+            event.accept(ModItems.SHULKER_SHARD);
             event.accept(ModItems.DIAMOND_BRUSH);
 
             event.accept(ModBlocks.QUICK_SAND);
@@ -72,6 +75,7 @@ public class KelloMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.RAT.get(), RatRenderer::new);
+            EntityRenderers.register(ModEntities.ENDER_RAT.get(), EnderRatRenderer::new);
         }
     }
 }

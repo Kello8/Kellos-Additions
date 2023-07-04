@@ -1,8 +1,10 @@
 {
   "item.kellomod.amethyst_clock": "§dAmethyst Clock",
   "item.kellomod.rat": "Rat",
+  "item.kellomod.ender_rat": "Ender Rat",
   "item.kellomod.rat_tail": "Rat Tail",
   "item.kellomod.rat_fur": "Rat Fur",
+  "item.kellomod.shulker_shard": "Shulker Shard",
   "item.kellomod.diamond_brush": "Diamond Brush",
 
   "block.kellomod.chiseled_dark_prismarine_bricks": "Chiseled Dark Prismarine Bricks",
@@ -17,6 +19,7 @@
   "block.kellomod.quick_sand": "Quick Sand",
 
   "entity.kellomod.rat": "Rat",
+  "entity.kellomod.ender_rat": "Ender Rat",
 
   "sounds.kellomod.rat_squeak": "Rat squeaks",
   "sounds.kellomod.rat_hurt": "Rat hurts",
