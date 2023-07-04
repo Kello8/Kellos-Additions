@@ -17,13 +17,13 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<RatEntity>> RAT =
             ENTITY_TYPES.register("rat",
-                    () -> EntityType.Builder.of(RatEntity::new, MobCategory.CREATURE)
+                    () -> EntityType.Builder.of(RatEntity::new, MobCategory.MONSTER)
                             .sized(0.6f, 0.3f)
                             .build(new ResourceLocation(KelloMod.MOD_ID, "rat").toString()));
 
     public static final RegistryObject<EntityType<EnderRatEntity>> ENDER_RAT =
             ENTITY_TYPES.register("ender_rat",
-                    () -> EntityType.Builder.of(EnderRatEntity::new, MobCategory.CREATURE)
+                    () -> EntityType.Builder.of(EnderRatEntity::new, MobCategory.MONSTER)
                             .sized(0.6f, 0.3f)
                             .build(new ResourceLocation(KelloMod.MOD_ID, "ender_rat").toString()));
 
